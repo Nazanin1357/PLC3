@@ -1,0 +1,1143 @@
+</Description>
+</Member>
+<Member Name="CurrentStepRight1" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current EP Action
+Primary Execution
+Order Step On
+Footprint Right Side]]>
+</Description>
+</Member>
+<Member Name="CurrentStepRight2" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Current EP Action
+Secondary Execution
+Order Step On
+Footprint Right Side]]>
+</Description>
+</Member>
+<Member Name="TaskArraySize" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Max Array Position
+In EP Task
+Status Array]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zp_EPTaskStatus" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Error Proofing
+Task Status
+Data Structure
+<@VER 1.400>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="Status" DataType="zz_EPTaskStatus" Dimension="0" Radix="NullType" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Status]]>
+</Description>
+</Member>
+<Member Name="ConfigIndex" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Position Triggered
+In Process Behavior
+Configuration Array]]>
+</Description>
+</Member>
+<Member Name="EventCodeGSIP" DataType="INT" Dimension="19" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Event Code For GSIP]]>
+</Description>
+</Member>
+<Member Name="EventPVI" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PVI For GSIP Event]]>
+</Description>
+</Member>
+<Member Name="TrackingIndex" DataType="DINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Position Triggered
+In Tracking Image]]>
+</Description>
+</Member>
+</Members>
+<Dependencies>
+<Dependency Type="DataType" Name="zz_EPTaskStatus"/>
+</Dependencies>
+</DataType>
+<DataType Name="zz_EPConfigTask" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Error Proofing
+Task Configuration
+Data Structure
+<@VER 1.400>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_EPConfi0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="BypassReleaseAll" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Apply Bypass/Release
+Key Switch to All
+Subsequent Tasks In
+Execution Order]]>
+</Description>
+</Member>
+<Member Name="CriticalHardHold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Critical Hard Hold
+Pass & No Work GSIP
+Events Required]]>
+</Description>
+</Member>
+<Member Name="DelayAndon" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Delay Andon Call From Programmable Warning Point To EP Action Stop Point]]>
+</Description>
+</Member>
+<Member Name="DisableConvHold" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Disable Conveyor Hold]]>
+</Description>
+</Member>
+<Member Name="DisableCmpl" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Disable Tool When Action Completed]]>
+</Description>
+</Member>
+<Member Name="DisableGSIP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Disable GSIP Events]]>
+</Description>
+</Member>
+<Member Name="DisableTask" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Disable Task]]>
+</Description>
+</Member>
+<Member Name="ForceWarning" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Force Warning Point
+To Current Footprint
+Travel On Error]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPConfi9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="KeyRestart" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Require Release Key
+To Restart Conveyor
+If Stopped By Task]]>
+</Description>
+</Member>
+<Member Name="LeftSide" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Located On
+Footprint Left Side]]>
+</Description>
+</Member>
+<Member Name="RightSide" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Located On
+Footprint Right Side]]>
+</Description>
+</Member>
+<Member Name="SecondaryExecOrder" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Follow Secondary
+Order of Execution
+Sequence]]>
+</Description>
+</Member>
+<Member Name="SilenceHorn" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Silence Horn]]>
+</Description>
+</Member>
+<Member Name="TriggerMatchAll" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Require Trigger
+Match For All Jobs
+& Enable Bad Build
+Data Fault]]>
+</Description>
+</Member>
+<Member Name="TypeMode1" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Type Specific
+Mode Selection Bit 1]]>
+</Description>
+</Member>
+<Member Name="TypeMode2" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Type Specific
+Mode Selection Bit 2]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPConfi18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="Alt" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Alternates
+With Other Task(s)
+In This Footprint
+(including backups)]]>
+</Description>
+</Member>
+<Member Name="BackedUp" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Is Backed Up
+By Another Task]]>
+</Description>
+</Member>
+<Member Name="IsBackup" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPConfi18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Backs Up
+Another Task]]>
+</Description>
+</Member>
+<Member Name="ExecOrderLeft" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Order of Execution
+On Footprint
+Left Side]]>
+</Description>
+</Member>
+<Member Name="ExecOrderRight" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Order of Execution
+On Footprint
+Right Side]]>
+</Description>
+</Member>
+<Member Name="StartTravel" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[% Footprint Travel
+To Start EP Action]]>
+</Description>
+</Member>
+<Member Name="WarningPoint" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[% Footprint Travel
+To Programmable
+Warning Point]]>
+</Description>
+</Member>
+<Member Name="StopTravel" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[% Footprint Travel
+To Hold Conveyor On
+Failed or Incomplete
+EP Action]]>
+</Description>
+</Member>
+<Member Name="NumPrevFP" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Number of Previous
+Footprints Where
+Task Can Execute]]>
+</Description>
+</Member>
+<Member Name="Type" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Type]]>
+</Description>
+</Member>
+<Member Name="FirstTrigger" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task First Trigger
+Array Position]]>
+</Description>
+</Member>
+<Member Name="LastTrigger" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Last Trigger
+Array Position]]>
+</Description>
+</Member>
+<Member Name="MachCodeGSIP" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Machine Code For GSIP Event]]>
+</Description>
+</Member>
+<Member Name="Number" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task ID Number]]>
+</Description>
+</Member>
+<Member Name="StacklightID" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Stacklight & Key Switch ID Number]]>
+</Description>
+</Member>
+<Member Name="ToolID" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tool ID Number]]>
+</Description>
+</Member>
+<Member Name="BackupID" DataType="INT" Dimension="0" Radix="Decimal" Hidden="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[ID Number of
+Last Task That
+Backs Up This Task]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+<DataType Name="zz_EPTaskStatus" Family="NoFamily" Class="User">
+<Description>
+<![CDATA[Error Proofing
+Task Status 
+Data Structure
+<@VER 1.420>
+<@NO EDITS>]]>
+</Description>
+<Members>
+<Member Name="ZZZZZZZZZZzz_EPTaskS0" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="WorkRequired" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Required]]>
+</Description>
+</Member>
+<Member Name="InProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work In Progress]]>
+</Description>
+</Member>
+<Member Name="WorkEnabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Enabled]]>
+</Description>
+</Member>
+<Member Name="WorkComplete" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Complete]]>
+</Description>
+</Member>
+<Member Name="Bypassed" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bypassed]]>
+</Description>
+</Member>
+<Member Name="ReleaseReq" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Release Request]]>
+</Description>
+</Member>
+<Member Name="Released" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Released]]>
+</Description>
+</Member>
+<Member Name="WarningPoint" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS0" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Error Proofing Action is At the Programable Warning Point]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPTaskS9" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="FPS" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Fixed Position Stop]]>
+</Description>
+</Member>
+<Member Name="Disabled" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Error Proofing Task Is Disabled]]>
+</Description>
+</Member>
+<Member Name="Faulted" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Error Proofing Action Is Faulted]]>
+</Description>
+</Member>
+<Member Name="BadBuildData" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bad or No Build Data]]>
+</Description>
+</Member>
+<Member Name="CommError" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tool Communication Error]]>
+</Description>
+</Member>
+<Member Name="PrerequisitesComplete" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Prerequisite Actions Complete]]>
+</Description>
+</Member>
+<Member Name="AtFPS" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Faulted At FPS Position]]>
+</Description>
+</Member>
+<Member Name="ActionReq" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS9" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action Request]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPTaskS18" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="JobPresent" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Data Present]]>
+</Description>
+</Member>
+<Member Name="NoBuildJob" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Data No Operation]]>
+</Description>
+</Member>
+<Member Name="KSBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bypass Key Switch Position]]>
+</Description>
+</Member>
+<Member Name="KSRelease" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Release Key Switch Position]]>
+</Description>
+</Member>
+<Member Name="Started" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Started by operator]]>
+</Description>
+</Member>
+<Member Name="Fail" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Task Fail to Complete]]>
+</Description>
+</Member>
+<Member Name="PastStartFP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Is Past
+Starting Footprint]]>
+</Description>
+</Member>
+<Member Name="PreWarningFP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS18" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Is Before
+Warning Footprint]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPTaskS27" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="PastWarningFP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Is Past
+Warning Footprint]]>
+</Description>
+</Member>
+<Member Name="PreStopFP" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Job Is Before
+Stopping Footprint]]>
+</Description>
+</Member>
+<Member Name="RetriggerReq" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Reset & Retrigger
+Request]]>
+</Description>
+</Member>
+<Member Name="RTBypass" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Bypass Task
+Runtime Command]]>
+</Description>
+</Member>
+<Member Name="RTCmdInProgress" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="4" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Runtime Command
+In Progress]]>
+</Description>
+</Member>
+<Member Name="RTEnable" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="5" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Enable Task Override
+Runtime Command]]>
+</Description>
+</Member>
+<Member Name="RTRelease" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="6" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Release Task
+Runtime Command]]>
+</Description>
+</Member>
+<Member Name="JobMismatch" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS27" BitNumber="7" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[PVI Mismatch between 
+Task and Action]]>
+</Description>
+</Member>
+<Member Name="ZZZZZZZZZZzz_EPTaskS36" DataType="SINT" Dimension="0" Radix="Decimal" Hidden="true" ExternalAccess="Read/Write"/>
+<Member Name="BatteryLow" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS36" BitNumber="0" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tool Battery Low Warning]]>
+</Description>
+</Member>
+<Member Name="TetheringOut" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS36" BitNumber="1" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Tool Out Of Tethering Zone]]>
+</Description>
+</Member>
+<Member Name="NoRetrigger" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS36" BitNumber="2" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[No Retrigger allows for this task]]>
+</Description>
+</Member>
+<Member Name="OnlyReject" DataType="BIT" Dimension="0" Radix="Decimal" Hidden="false" Target="ZZZZZZZZZZzz_EPTaskS36" BitNumber="3" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Retriger Task only for reject]]>
+</Description>
+</Member>
+</Members>
+</DataType>
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="za_EPSensorActions" Revision="1.403" RevisionExtension="&lt;@NO EDITS>" Vendor="GM-ME-VS-Automation" ExecutePrescan="true" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2015-10-21T18:23:23.320Z" CreatedBy="RA-INT\KlWelch" EditedDate="2020-08-21T11:44:05.108Z"
+ EditedBy="NAM\kz9y9x" SoftwareRevision="v24.00">
+<Description>
+<![CDATA[<@VER 1.403> Sensor Error Proofing Action]]>
+</Description>
+<RevisionNote>
+<![CDATA[1.403 Action Side Added
+1.400  Initial release.]]>
+</RevisionNote>
+<AdditionalHelpText>
+<![CDATA[SENSOR ERROR PROOFING ACTION AOI
+
+This instruction sets behavior parameters, Indicator Output bit, and Error Proofing
+
+Output Parameters]]>
+</AdditionalHelpText>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="devSN" TagType="Base" DataType="zc_EPSensorGroup" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="in_ConfigFPTask" TagType="Base" DataType="zz_EPConfigTask" Dimensions="1" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="tagConfigArraySize" TagType="Base" DataType="zc_EPConfigArraySize" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="tagConfigSensor" TagType="Base" DataType="zc_EPConfigSensorBehavior" Dimensions="1" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="tagFlash" TagType="Base" DataType="zc_Flasher" Usage="InOut" Required="true" Visible="true" Constant="false">
+<Description>
+<![CDATA[Controller
+Flash Control]]>
+</Description>
+</Parameter>
+<Parameter Name="tagSequence" TagType="Base" DataType="zp_EPSequence" Usage="InOut" Required="true" Visible="true" Constant="false">
+<Description>
+<![CDATA[Error Proofing Task
+Sequence Data]]>
+</Description>
+</Parameter>
+<Parameter Name="tagTask" TagType="Base" DataType="zp_EPTaskStatus" Dimensions="1" Usage="InOut" Required="true" Visible="true" Constant="false"/>
+<Parameter Name="CommOK" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Communication OK
+With I/O]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="InProgress" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work In Progress]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ToolEnabled" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Complete" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Work Complete]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="LeftSide" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action on Left Side]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="RightSde" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Action on Right Side]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_parameters_below_for_display_only" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_ToolID" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_ActiveTask" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_ActiveConfig" TagType="Base" DataType="INT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_ActiveCyclesRequired" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="_CycleCount" TagType="Base" DataType="SINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Index" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ONS1" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ActiveCyclesRequired" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ActiveConfig" DataType="DINT" Radix="Decimal" ExternalAccess="Read Only">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ActiveTask" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CycleCount" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="ONS2" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TaskActive" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="TaskActiveDwell" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Task Active Until
+Next Step Finishes]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="NextStepRight" DataType="SINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="NextStepLeft" DataType="SINT" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="SINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SensorMask" DataType="INT" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Sensors Required
+Mask for I/O]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="INT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="WorkCompMem" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Work Complete
+Memory]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="SecondaryExecOrder" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Follow Secondary
+Order of Execution
+Sequence]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AntiRepeatEnabled" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="StandardLtMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Standard
+Light Mode]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="BlindLoadLtMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Blind Load
+Light Mode]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="InputTrueLowMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="InputTrueHighMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="FixtSolidLtMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Fixture Solid
+Light Mode]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="FixtFlashLtMode" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Fixture Flashing
+Light Mode]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="LastTask" DataType="DINT" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Last Active
+Task]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="AssignedTask" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<Description>
+<![CDATA[Action Run 
+Memory]]>
+</Description>
+<DefaultData Format="L5K">
+<![CDATA[0]]>
+</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[<@VER 1.403><@NO EDITS>
+<@SYS>
+</Comment>
+<Text>
+<![CDATA[EQU(devSN.ToolID,0)TND();]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+</Comment>
+<Text>
+<![CDATA[XIC(TaskActive)[XIO(Complete) JMP(Process) ,XIC(Complete) XIC(TaskActiveDwell) JMP(ActiveDwell) ];]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+</Comment>
+<Text>
+<![CDATA[CLR(Index);]]>
+</Text>
+</Rung>
+<Rung Number="3" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+
+</Comment>
+<Text>
+<![CDATA[LBL(CheckTaskLoop)[XIO(tagTask[Index].Status.ActionReq) ,NEQ(in_ConfigFPTask[Index].ToolID,devSN.ToolID) ,NEQ(in_ConfigFPTask[Index].Type,4) ]LES(Index,tagSequence.TaskArraySize)LES(Index,tagConfigArraySize.Task)ADD(Index,1,Index)JMP(CheckTaskLoop);]]>
+</Text>
+</Rung>
+<Rung Number="4" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#</Comment>
+<Text>
+<![CDATA[XIC(tagTask[Index].Status.ActionReq)EQU(devSN.ToolID,in_ConfigFPTask[Index].ToolID)EQU(in_ConfigFPTask[Index].Type,4)[MOV(Index,ActiveTask) MOV(tagTask[Index].ConfigIndex,ActiveConfig) OTL(TaskActive) OTL(ToolEnabled) OTU(Complete) OTU(WorkCompMem) ,OTL(AssignedTask) MOV(ActiveTask,LastTask) ,XIC(in_ConfigFPTask[Index].LeftSide) OTE(LeftSide) ,XIC(in_ConfigFPTask[Index].RightSide) OTE(RightSde) ,XIO(devSN.CommOk) OTE(CommOK) ];]]>
+</Text>
+</Rung>
+<Rung Number="5" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#======
+</Comment>
+<Text>
+<![CDATA[XIO(TaskActive)JMP(End);]]>
+</Text>
+</Rung>
+<Rung Number="6" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Set Light Modes & Work In Progress.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(in_ConfigFPTask[Index].TypeMode1) OTL(BlindLoadLtMode) ,XIC(in_ConfigFPTask[Index].TypeMode2) OTL(FixtSolidLtMode) ,XIO(BlindLoadLtMode) XIO(FixtSolidLtMode) OTL(StandardLtMode) ,XIC(BlindLoadLtMode) XIC(FixtSolidLtMode) OTL(FixtFlashLtMode) OTU(BlindLoadLtMode) OTU(FixtSolidLtMode) ,MOV(tagConfigSensor[ActiveConfig].SensorMask,SensorMask) ,OTL(InProgress) OTL(tagTask[ActiveTask].Status.InProgress) ];]]>
+</Text>
+</Rung>
+<Rung Number="7" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Copy the Active Cycles Configuration.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[MOV(0,CycleCount) MOV(tagConfigSensor[ActiveConfig].CyclesRequired,ActiveCyclesRequired) ,GEQ(ActiveCyclesRequired,1) OTL(AntiRepeatEnabled) ];]]>
+</Text>
+</Rung>
+<Rung Number="8" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Set Task Active Dwell If One Cycle or less is Required and
+# Tool is Not Disabled when Action is Complete.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[XIO(in_ConfigFPTask[Index].DisableCmpl)LEQ(ActiveCyclesRequired,1)[ADD(in_ConfigFPTask[Index].ExecOrderLeft,1,NextStepLeft) ADD(in_ConfigFPTask[Index].ExecOrderRight,1,NextStepRight) ,XIC(in_ConfigFPTask[Index].SecondaryExecOrder) OTE(SecondaryExecOrder) ,[GRT(NextStepLeft,1) ,GRT(NextStepRight,1) ] OTL(TaskActiveDwell) ];]]>
+</Text>
+</Rung>
+<Rung Number="9" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Set the Task Complete.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[LBL(Process)XIC(InProgress)GEQ(CycleCount,1)[GEQ(CycleCount,ActiveCyclesRequired) OTL(Complete) ,OTU(tagTask[ActiveTask].Status.Started) ];]]>
+</Text>
+</Rung>
+<Rung Number="10" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# If WorkEnabled is reset before any cycles are completed,
+# then reset the ActiveTask
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[LES(CycleCount,1)XIO(tagTask[ActiveTask].Status.WorkEnabled)XIO(Complete)OTU(InProgress)OTU(tagTask[ActiveTask].Status.InProgress)OTU(TaskActive)OTU(ToolEnabled)MOV(-1,ActiveTask)JMP(End);]]>
+</Text>
+</Rung>
+<Rung Number="11" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# If WorkComplete on the ActiveBehavior, then reset the ActiveBehavior.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(Complete) OTL(tagTask[ActiveTask].Status.WorkComplete) ,XIC(tagTask[ActiveTask].Status.ReleaseReq) ][OTU(InProgress) OTU(tagTask[ActiveTask].Status.InProgress) OTU(WorkCompMem) ,OTU(tagTask[ActiveTask].Status.Started) ,[XIO(TaskActiveDwell) ,XIO(Complete) OTU(TaskActiveDwell) ] OTU(TaskActive) OTU(ToolEnabled) ,XIO(Complete) MOV(101,tagTask[ActiveTask].EventCodeGSIP[3]) ];]]>
+</Text>
+</Rung>
+<Rung Number="12" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Reset Task Active Dwell & Task Active when
+# At least one Action is Complete in the next step.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[LBL(ActiveDwell)XIC(TaskActiveDwell)[XIC(Complete) ,XIC(WorkCompMem) ][GRT(NextStepLeft,1) [XIO(SecondaryExecOrder) [EQU(tagSequence.CurrentStepLeft1,NextStepLeft) XIC(tagSequence.StepDoneLeft1) ,GRT(tagSequence.CurrentStepLeft1,NextStepLeft) ,EQU(tagSequence.CurrentStepLeft1,0) ] ,XIC(SecondaryExecOrder) [EQU(tagSequence.CurrentStepLeft2,NextStepLeft) XIC(tagSequence.StepDoneLeft2) ,GRT(tagSequence.CurrentStepLeft2,NextStepLeft) ,EQU(tagSequence.CurrentStepLeft2,0) ] ] ,GRT(NextStepRight,1) [XIO(SecondaryExecOrder) [EQU(tagSequence.CurrentStepRight1,NextStepRight) XIC(tagSequence.StepDoneRight1) ,GRT(tagSequence.CurrentStepRight1,NextStepRight) ,EQU(tagSequence.CurrentStepRight1,0) ] ,XIC(SecondaryExecOrder) [EQU(tagSequence.CurrentStepRight2,NextStepRight) XIC(tagSequence.StepDoneRight2) ,GRT(tagSequence.CurrentStepRight2,NextStepRight) ,EQU(tagSequence.CurrentStepRight2,0) ] ] ][XIC(Complete) OTU(TaskActiveDwell) OTU(TaskActive) OTU(ToolEnabled) ,XIC(WorkCompMem) MOV(ActiveCyclesRequired,CycleCount) ];]]>
+</Text>
+</Rung>
+<Rung Number="13" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Clear Cycle Count, Reset Work Complete & Set In Progress
+# If Sensor State changes while Task Active Dwell is on.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[XIC(TaskActiveDwell)XIC(Complete)NEQ(devSN.SensorInput,SensorMask)XIC(CommOK)CLR(CycleCount)OTU(Complete)OTU(tagTask[ActiveTask].Status.WorkComplete)OTL(WorkCompMem)OTL(InProgress)OTL(tagTask[ActiveTask].Status.InProgress);]]>
+</Text>
+</Rung>
+<Rung Number="14" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Clear Active Task Configuration on Release Request
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[XIO(TaskActive)XIO(TaskActiveDwell)[MOV(-1,ActiveTask) CLR(ActiveConfig) CLR(ActiveCyclesRequired) CLR(CycleCount) ,OTU(AntiRepeatEnabled) OTU(StandardLtMode) OTU(BlindLoadLtMode) OTU(FixtSolidLtMode) OTU(FixtFlashLtMode) ];]]>
+</Text>
+</Rung>
+<Rung Number="15" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Increment the Cycle Count
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[LBL(End)[XIC(InProgress) ,XIC(AntiRepeatEnabled) ]EQU(devSN.SensorInput,SensorMask)ONS(ONS1)XIC(InProgress)XIC(CommOK)ADD(CycleCount,1,CycleCount);]]>
+</Text>
+</Rung>
+<Rung Number="16" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Set Light Outputs
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[XIC(ToolEnabled)[[XIC(StandardLtMode) XIC(tagFlash.Norm) ,[XIC(FixtSolidLtMode) ,XIC(FixtFlashLtMode) XIC(tagFlash.Norm) ] XIO(Complete) ] MOV(SensorMask,devSN.LightOutput) ,XIC(BlindLoadLtMode) XIC(tagFlash.Norm) MOV(devSN.SensorInput,devSN.LightOutput) ,[XIC(StandardLtMode) ,XIC(BlindLoadLtMode) ] XIO(tagFlash.Norm) AND(SensorMask,devSN.SensorInput,devSN.LightOutput) ];]]>
+</Text>
+</Rung>
+<Rung Number="17" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Clear Light Outputs
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[XIO(ToolEnabled) ,XIC(FixtSolidLtMode) XIC(Complete) ,XIC(FixtFlashLtMode) XIO(tagFlash.Norm) ]CLR(devSN.LightOutput);]]>
+</Text>
+</Rung>
+<Rung Number="18" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Update status for AOI faceplate (display purposes only)
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[MOV(devSN.ToolID,_ToolID)ADD(ActiveTask,1,_ActiveTask)MOV(ActiveConfig,_ActiveConfig)MOV(ActiveCyclesRequired,_ActiveCyclesRequired)MOV(CycleCount,_CycleCount);]]>
+</Text>
+</Rung>
+<Rung Number="19" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# End routine when no communication stanedtus change
+# no task has been assig
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(devSN.CommOk) XIC(CommOK) ,XIO(devSN.CommOk) XIO(CommOK) ,XIO(AssignedTask) ]TND();]]>
+</Text>
+</Rung>
+<Rung Number="20" Type="N">
+<Comment>
+<![CDATA[<@INFO>
+#=======================================================
+# Monitoring Device Communication
+# Process only when has been changed state
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[[XIC(devSN.CommOk) OTE(CommOK) ,XIO(CommOK) OTE(tagTask[LastTask].Status.CommError) ];]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+<Routine Name="Prescan" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Comment>
+<![CDATA[<@VER 1.400><@NO EDITS>
+<@SYS>
+#=======================================================
+# SENSOR ERROR PROOFING ACTION AOI
+#
+# This instruction sets behavior parameters, Indicator Output bit, and Error
+# Proofing Action In Progress & Complete statuses for a group of 1-16 Sensors.
+#=======================================================
+<@INFO>
+#=======================================================
+# Clear the Device Output.
+#=======================================================]]>
+</Comment>
+<Text>
+<![CDATA[OTU(AssignedTask)CLR(LastTask)CLR(devSN.LightOutput);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+</Routines>
+<Dependencies>
+<Dependency Type="DataType" Name="zc_EPSensorGroup"/>
+<Dependency Type="DataType" Name="zz_EPConfigTask"/>
+<Dependency Type="DataType" Name="zc_EPConfigArraySize"/>
+<Dependency Type="DataType" Name="zc_EPConfigSensorBehavior"/>
+<Dependency Type="DataType" Name="zc_Flasher"/>
+<Dependency Type="DataType" Name="zp_EPSequence"/>
+<Dependency Type="DataType" Name="zp_EPTaskStatus"/>
+</Dependencies>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
